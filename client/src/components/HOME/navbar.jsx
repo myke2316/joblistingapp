@@ -19,13 +19,13 @@ export default function NavBar() {
               key={item}
               onClick={() => setActive(item)}
               className={`relative pb-2 text-base font-medium transition
-                ${active === item ? 'text-blue-600' : 'hover:text-blue-600'}
+                ${active === item ? 'text-green-600' : 'hover:text-green-600'}
               `}
               style={{ background: 'none', border: 'none', outline: 'none' }}
             >
               {item}
               {active === item && (
-                <span className="absolute left-0 bottom-0 w-full h-1 bg-blue-600 rounded"></span>
+                <span className="absolute left-0 bottom-0 w-full h-1 bg-green-600 rounded"></span>
               )}
             </button>
           ))}
