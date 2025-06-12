@@ -39,7 +39,7 @@ export default function Register() {
                 </label>
               </div>
             ))}
-          </div>
+          </div>  
 
           {/* Gender */}
           <div className="relative">
@@ -198,7 +198,7 @@ export default function Register() {
 
         <p className="text-center text-sm text-green-800 mt-6">
           Already have an account?{' '}
-          <Link to="/login" className="text-green-600 font-medium hover:underline">
+          <Link to="/" className="text-green-600 font-medium hover:underline">
             Login
           </Link>
         </p>

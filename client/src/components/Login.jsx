@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import '../index.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted');
+    navigate('/home');  
   };
 
+ 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-green-200 via-white to-green-100 px-4">
       <div className="w-full max-w-md rounded-2xl shadow-lg bg-white/90 border border-green-100 p-10 backdrop-blur-sm">
@@ -60,6 +61,7 @@ export default function Login() {
           </div>
 
           <button
+          onClick={handleSubmit}
             type="submit"
             className="w-full py-3 rounded-lg bg-green-600 text-white font-medium hover:bg-green-700 transition duration-300"
           >
